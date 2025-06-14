@@ -1,47 +1,78 @@
 .form {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
+  gap: 15px; /* Замість margin-bottom на .formGroup, використовуємо gap для гнучкості */
+  padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-  margin-bottom: 15px;
+  border-radius: 8px; /* Трохи більший радіус для м'якшого вигляду */
+  background-color: #fff; /* Змінено з #f9f9f9 для кращої читабельності */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Додаємо легку тінь */
+
+  /* Стилі для центрування та обмеження ширини форми */
+  width: 100%; /* Займає всю доступну ширину */
+  max-width: 400px; /* Обмежуємо максимальну ширину форми */
+  margin: 0 auto 30px auto; /* Центруємо форму горизонтально, додаємо відступ знизу */
+  box-sizing: border-box; /* Важливо для правильного розрахунку ширини з padding */
+  align-items: stretch; /* Важливо: розтягує дочірні елементи (formGroup) на всю ширину форми */
 }
 
-span {
-  color: red;
-  font-size: 0.9em;
-  margin-top: 5px;
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Відступ між label та input/error */
+  /* width: 100%; - Це вже не потрібно, бо батьківський .form має align-items: stretch; */
+  /* margin-bottom: 15px; - Замінено на gap в .form */
 }
 
-button {
-  padding: 10px 20px;
+.label {
+  /* Раніше "label", тепер ".label" */
+  display: block;
+  margin-bottom: 0; /* Видаляємо, бо gap на .formGroup це регулює */
+  font-weight: bold;
+  color: #333; /* Трохи темніший колір для кращої читабельності */
+}
+
+.input {
+  /* Раніше "input", тепер ".input" */
+  width: 100%;
+  padding: 10px; /* Трохи більший паддінг */
+  border: 1px solid #ddd; /* Трохи світліший бордер */
+  border-radius: 4px; /* Трохи менший радіус */
+  font-size: 16px; /* Більший шрифт */
+  /* margin-bottom: 15px; - Видаляємо, бо gap на .formGroup це регулює */
+  box-sizing: border-box; /* Важливо для правильного розрахунку ширини */
+}
+
+.input:focus {
+  border-color: #007bff; /* Колір бордера при фокусі */
+  outline: none; /* Прибираємо стандартний outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Легка тінь при фокусі */
+}
+
+.error {
+  color: #dc3545; /* Червоний для помилок */
+  font-size: 14px; /* Трохи більший шрифт */
+  margin-top: 5px; /* Невеликий відступ зверху */
+  display: block;
+}
+
+.button {
+  /* Раніше "button", тепер ".button" */
+  padding: 12px 20px; /* Трохи більший паддінг */
   border: none;
-  border-radius: 5px;
+  border-radius: 4px; /* Трохи менший радіус */
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 18px; /* Більший шрифт */
   margin-top: 10px;
+  transition: background-color 0.3s ease; /* Плавний перехід */
+
+  align-self: center; /* Центрує кнопку всередині Flex-контейнера форми */
+  width: 80%; /* Можна зменшити ширину кнопки */
+  max-width: 200px; /* Обмежити максимальну ширину кнопки */
 }
 
-button:hover {
+.button:hover {
   background-color: #0056b3;
 }

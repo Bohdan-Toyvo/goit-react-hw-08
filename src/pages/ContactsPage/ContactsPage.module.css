@@ -1,0 +1,23 @@
+.container {
+  max-width: 800px; /* Обмежуємо ширину вмісту для кращого вигляду */
+  margin: 0 auto; /* Центруємо контейнер по горизонталі */
+  padding: 20px;
+  text-align: center; /* Центруємо текстові елементи всередині контейнера */
+}
+
+.title {
+  color: #333; /* Темний колір для заголовка */
+  margin-bottom: 30px; /* Відступ під заголовком */
+  font-size: 2.5em; /* Розмір заголовка */
+}
+
+/* Стилі для повідомлень (завантаження, помилка, порожній список) */
+.message {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}

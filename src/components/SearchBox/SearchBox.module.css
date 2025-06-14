@@ -1,19 +1,43 @@
 .searchBox {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* Елементи розташовані вертикально */
+  gap: 10px; /* Відступ між label та input */
+
+  padding: 20px; /* Внутрішній відступ */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Трохи більший радіус для м'якшого вигляду */
+  background-color: #fff; /* Білий фон */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легка тінь */
+
+  /* Стилі для центрування та обмеження ширини блоку SearchBox */
+  width: 100%; /* Займає всю доступну ширину батьківського контейнера */
+  max-width: 400px; /* Обмежуємо максимальну ширину, як і для форми */
+  margin: 20px auto; /* Центруємо горизонтально, додаємо відступи зверху/знизу */
+  box-sizing: border-box; /* Важливо для правильного розрахунку ширини з padding */
+
+  /* align-items: center;  Можна додати, якщо хочете, щоб label та input були по центру */
+  /* text-align: center; - Це впливає на текст всередині, але не на сам блок. Залишимо, якщо хочете щоб label був по центру */
 }
 
 .searchBox label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0; /* Прибираємо, бо gap на батьківському .searchBox це регулює */
   font-weight: bold;
+  color: #333; /* Темніший колір */
+  text-align: center; /* Зазвичай label краще вирівняти по лівому краю всередині свого блоку */
 }
 
 .searchBox input {
-  width: 300px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
+  width: 100%; /* Займає всю ширину батьківського .searchBox (з врахуванням padding) */
+  padding: 10px; /* Більший паддінг */
+  border: 1px solid #ddd; /* Світліший бордер */
+  border-radius: 4px;
+  font-size: 16px; /* Більший шрифт */
+  box-sizing: border-box; /* Дуже важливо */
+}
+
+.searchBox input:focus {
+  border-color: #007bff; /* Колір бордера при фокусі */
+  outline: none; /* Прибираємо стандартний outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Легка тінь при фокусі */
 }

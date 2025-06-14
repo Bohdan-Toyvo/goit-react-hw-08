@@ -1,22 +1,56 @@
 .contactList {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin: 0; /* Прибираємо всі зовнішні відступи */
 
-  display: flex; /* Робимо список флекс-контейнером */
-  flex-wrap: wrap; /* Якщо елементів багато — переносяться */
-  gap: 10px; /* Відстань між контактами */
-  justify-content: center; /* Вирівнювання по центру */
+  /* **** ВИДАЛЕНІ ДЕКОРАТИВНІ СТИЛІ, ЯКІ БУДУТЬ У НОВІЙ ОБГОРТЦІ **** */
+  /* border: 1px solid #e0e0e0; */
+  /* border-radius: 8px; */
+  /* background-color: #fff; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
+  /* padding: 10px; */ /* Внутрішній відступ контейнера */
+
+  /* **** CSS GRID ДЛЯ СІТКИ (залишається) **** */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Автоматичні колонки: min-ширина 250px, розтягуються 1fr */
+  gap: 10px; /* Відстань між картками (горизонтально і вертикально) */
+  justify-items: center; /* Центрує елементи всередині їхніх клітинок сітки */
+  align-items: stretch; /* Розтягує елементи по висоті, якщо потрібно */
 }
 
 .contactListItem {
-  display: flex;
+  /* **** СТИЛІ ДЛЯ ОКРЕМОЇ КАРТКИ КОНТАКТУ (без змін) **** */
+  display: flex; /* Зберігаємо flex для внутрішнього вмісту картки */
+  flex-direction: row; /* Ім'я/номер та кнопка в ряд */
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  margin-bottom: 10px;
+  justify-content: space-between; /* Рознести вміст (Contact компонент) */
+
+  width: 100%; /* Картка займає 100% ширини своєї клітинки в сітці */
+  height: auto; /* Висота адаптивна до вмісту */
+
+  padding: 15px; /* Більший паддінг */
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #f9f9f9;
   color: black;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Стилі для повідомлень (без змін) */
+.message {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+  font-style: italic;
+  width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: #000;
 }

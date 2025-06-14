@@ -1,0 +1,15 @@
+.homePageContainer {
+  text-align: center; /* Вирівнюємо текст по центру */
+  padding: 20px; /* Додаємо внутрішній відступ */
+  /* Додаткові стилі, якщо потрібні, наприклад, для фону або рамок */
+}
+
+.homePageContainer h1 {
+  margin-bottom: 10px; /* Відступ під заголовком */
+  color: #333; /* Колір для заголовка */
+}
+
+.homePageContainer p {
+  color: #555; /* Колір для параграфа */
+  line-height: 1.6;
+}

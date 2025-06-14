@@ -1,0 +1,21 @@
+.authNav {
+  display: flex;
+  gap: 15px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.link:hover {
+  background-color: #555;
+}
+
+.activeLink {
+  composes: link; /* Наслідує стилі від .link */
+  background-color: #007bff; /* Колір для активного посилання */
+}

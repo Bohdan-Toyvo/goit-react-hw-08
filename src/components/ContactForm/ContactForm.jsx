@@ -6,7 +6,7 @@ import 'yup-phone-lite';
 import css from './ContactForm.module.css';
 
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 
 const contactSchema = Yup.object().shape({
   name: Yup.string()
@@ -45,7 +45,7 @@ export default function ContactForm() {
             name="name"
             type="text"
           />
-          <ErrorMessage name="name" component="span" />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
 
         <div className={css.formGroup}>
