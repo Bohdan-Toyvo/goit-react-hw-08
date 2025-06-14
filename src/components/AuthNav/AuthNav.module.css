@@ -16,6 +16,6 @@
 }
 
 .activeLink {
-  composes: link; /* Наслідує стилі від .link */
-  background-color: #007bff; /* Колір для активного посилання */
+  composes: link;
+  background-color: #007bff;
 }

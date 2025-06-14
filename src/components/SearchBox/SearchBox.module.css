@@ -1,43 +1,39 @@
 .searchBox {
   display: flex;
-  flex-direction: column; /* Елементи розташовані вертикально */
-  gap: 10px; /* Відступ між label та input */
+  flex-direction: column;
+  gap: 10px;
 
-  padding: 20px; /* Внутрішній відступ */
+  padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 8px; /* Трохи більший радіус для м'якшого вигляду */
-  background-color: #fff; /* Білий фон */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  /* Стилі для центрування та обмеження ширини блоку SearchBox */
-  width: 100%; /* Займає всю доступну ширину батьківського контейнера */
-  max-width: 400px; /* Обмежуємо максимальну ширину, як і для форми */
-  margin: 20px auto; /* Центруємо горизонтально, додаємо відступи зверху/знизу */
-  box-sizing: border-box; /* Важливо для правильного розрахунку ширини з padding */
-
-  /* align-items: center;  Можна додати, якщо хочете, щоб label та input були по центру */
-  /* text-align: center; - Це впливає на текст всередині, але не на сам блок. Залишимо, якщо хочете щоб label був по центру */
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  box-sizing: border-box;
 }
 
 .searchBox label {
   display: block;
-  margin-bottom: 0; /* Прибираємо, бо gap на батьківському .searchBox це регулює */
+  margin-bottom: 0;
   font-weight: bold;
-  color: #333; /* Темніший колір */
-  text-align: center; /* Зазвичай label краще вирівняти по лівому краю всередині свого блоку */
+  color: #333;
+  text-align: center;
 }
 
 .searchBox input {
-  width: 100%; /* Займає всю ширину батьківського .searchBox (з врахуванням padding) */
-  padding: 10px; /* Більший паддінг */
-  border: 1px solid #ddd; /* Світліший бордер */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px; /* Більший шрифт */
-  box-sizing: border-box; /* Дуже важливо */
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .searchBox input:focus {
-  border-color: #007bff; /* Колір бордера при фокусі */
-  outline: none; /* Прибираємо стандартний outline */
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Легка тінь при фокусі */
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
